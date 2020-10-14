@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build",
+			"label": "npm: build",
+			"detail": "tsc && echo '});' | cat build/umd-prelude.js build/sha256.js - > sha256.js && rm build/sha256.js && uglifyjs sha256.js -c -m -o sha256.min.js && mv build/sha256.d.ts ./"
+		}
+	]
+}

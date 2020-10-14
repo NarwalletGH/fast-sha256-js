@@ -13,7 +13,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc && echo '});' | cat build/umd-prelude.js build/sha256.js - > sha256.js && rm build/sha256.js && uglifyjs sha256.js -c -m -o sha256.min.js && mv build/sha256.d.ts ./",
+    "build": "tsc",
     "test": "tape test/test.js | faucet",
     "bench": "node test/bench.js",
     "lint": "tslint src/*.ts"
@@ -36,7 +36,6 @@
     "faucet": "0.x.x",
     "tape": "4.11.0",
     "tslint": "^5.20.0",
-    "typescript": "^3.6.4",
-    "uglify-js": "^3.1.9"
+    "typescript": "^4.0.0"
   }
 }
